@@ -1,7 +1,7 @@
 import re
-import urllib
+import urllib.request
 def gethtml(url):
-    page = urllib.urlopen(url)
+    page = urllib.request.urlopen(url)
     html = page.read()
     return html
 
@@ -9,8 +9,8 @@ html = gethtml('http://www.ivrfans.cn/xingge/qingchun')
 
 def getarea(html):
     reg = r'<div class="animalPhoto afterAnimalPhoto clear">([\d\D]*)<div class="page">'
-    areare = re.compile(reg)
-    area = re.search(areare, html)
+    areare = str(re.compile(reg))
+    area = re.search(areare, str(html))
     return area.group()
 
 #print getarea(html)
