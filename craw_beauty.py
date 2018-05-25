@@ -5,7 +5,7 @@ def gethtml(url):
     html = page.read()
     return html
 
-html = gethtml('http://www.ivrfans.cn/xingge/qingchun')
+html = gethtml('https://www.ivrfans.cn/meinvtupian/meinvzipai/')
 
 def getarea(html):
     reg = r'<div class="animalPhoto afterAnimalPhoto clear">([\d\D]*)<div class="page">'
