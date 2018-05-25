@@ -38,9 +38,19 @@ def get_each_item(items):
 		fout.write(str(a) + '\t' + str(dic[a]) + '\n')
 		#break
 		#print(dic)
-		#break
-			
+		#break		
 	return dic
+
+
+def get_each_item_content(dic):
+	for a in dic.keys():
+		for b in dic[a]:
+			if 
+			item_url = 'http' + str(dic[a])
+			content = requests.get(url).text
+			soup = BeautifulSoup(content,'lxml')
+
+
 
 items = get_page_content(i)
 dic = get_each_item(items)
